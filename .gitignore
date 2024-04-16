@@ -15,6 +15,7 @@ downloads/
 input_videos/
 extracted_audio/
 learn_mats/
+learn_mats_chunked/
 eggs/
 .eggs/
 lib/
@@ -155,3 +156,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 .DS_Store
+prompt

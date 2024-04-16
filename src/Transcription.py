@@ -3,8 +3,9 @@ import os
 
 
 class Transcription:
-    def __init__(self, transcriber):
+    def __init__(self, transcriber, output_folder):
         self.transcriber = transcriber
+        self.transcription_output_folder = output_folder
 
     def transcribe_audio_files(self, input_folder):
         if not os.path.exists(input_folder):
@@ -20,7 +21,8 @@ class Transcription:
 
     def transcribe_audio_file(self, audio_path):
         transcript = self.transcriber.transcribe(audio_path)
-        with open(f"learn_mats/{os.path.basename(audio_path)}.txt", "w") as f:
+        file_path = os.path.join(self.transcription_output_folder, f"{os.path.basename(audio_path)}.txt")
+        with open(file_path, "w") as f:
             f.write(transcript.text)
 
     def convert_video_to_audio_ffmpeg(self, video_file, output_ext="mp3", output_folder="extracted_audio"):

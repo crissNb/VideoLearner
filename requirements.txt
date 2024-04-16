@@ -1,2 +1,9 @@
 assemblyai
 python-dotenv==1.0.0
+g4f
+langchain
+langchain_openai
+langchain-community
+langchain-ai21
+open-text-embeddings
+streamlit
