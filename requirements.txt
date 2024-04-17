@@ -7,3 +7,4 @@ langchain-community
 langchain-ai21
 open-text-embeddings
 streamlit
+faiss-cpu

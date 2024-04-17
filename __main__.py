@@ -29,7 +29,7 @@ def transcribe_videos():
     if not os.path.exists(learn_mats_folder):
         os.makedirs(learn_mats_folder)
 
-    if len(os.listdir(input_folder)) > 0 or len(os.listdir(extracted_audio_folder)) > 0 or len(os.listdir(learn_mats_folder)) > 0:
+    if len(os.listdir(extracted_audio_folder)) > 0 or len(os.listdir(learn_mats_folder)) > 0:
         return
 
     ASSEMBLY_AI_API_KEY = os.getenv("ASSEMBLY_AI_API_KEY")
